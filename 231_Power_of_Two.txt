@@ -1,3 +1,5 @@
+Solution 1 :
+
 class Solution {
     public boolean isPowerOfTwo(int n) {
 
@@ -7,4 +9,14 @@ class Solution {
 
       return true & isPowerOfTwo(n/2);
     }    
+}
+
+Solution 2 :  Bit Manipulation
+
+Ref : https://medium.com/@Neelesh-Janga/q-231-leetcode-power-of-two-121621e4f041
+
+class Solution {
+    public boolean isPowerOfTwo(int n) { 
+     return  (n>0)&((n) & (n-1)) ==0;    
+    }
 }

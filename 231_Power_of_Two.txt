@@ -34,3 +34,5 @@ public class Solution {
         return false;
     }
 }
+
+Refer for other ways : https://leetcode.com/problems/power-of-two/solutions/4748857/8-approaches-c-java-python-javascript-explained/?submissionId=1203287331 

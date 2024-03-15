@@ -1,0 +1,45 @@
+Solution 1 :
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+      //ccreate a int variable and store lenth of the array
+       int l=nums.length;
+
+      // create array with length 2
+      int[] a= {0,0};
+      // create a hashmap with Integer as key and value 
+      HashMap<Integer,Integer> map= new HashMap<Integer,Integer>();
+      // for each element and check if map contains element 
+       for (int i=0;i<=l;i++) {
+           // if contains  target - element
+           if(map.containsKey(target-nums[i])){
+              a[0]=i;
+              a[1]= map.get(target-nums[i]);
+              return a; 
+               // store first element to element i 
+               // store second element from target -i 
+             }
+            // end iff
+             map.put(nums[i],i);
+           }         
+            // put element and key value to hashmap
+
+       return a;
+    }
+}
+
+
+Solution 2 : Hashmap Soltion - O(n)
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+     Map<Integer,Integer> map= new HashMap<Integer,Integer>();
+     for(Integer i=0;i<nums.length;i++){
+            Integer c=Integer.valueOf(target-nums[i]);
+            if(map.containsKey(c)) 
+                return new int[]{map.get(c).intValue(),i.intValue()};            
+            map.put(nums[i],i);
+        }
+    return new int[0];        
+    }
+}
